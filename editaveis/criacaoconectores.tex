@@ -4,8 +4,7 @@ Neste capítulo veremos como criar um conector, gerenciá-lo e utilizá-lo atrav
 
 \section{Criação de conectores}
 
-(REFERENCIAR https://docs.wso2.com/display/ESB480/Working+with+Connectors)
-A criação de conectores é feita para encapsular a API de um serviço externo, disponibilizando operações que podem ser acessadas por aplicações de forma simplificada. Os conectores são definidos por templates, que contém todas as operações disponíveis bem como propriedades (ou valores) necessárias para a execução da operação do serviço solicitada.
+A criação de conectores é feita para encapsular a API de um serviço externo, disponibilizando operações que podem ser acessadas por aplicações de forma simplificada. Os conectores são definidos por templates, que contém todas as operações disponíveis bem como propriedades (ou valores) necessárias para a execução da operação do serviço solicitada (\cite{working_with_connecntors}).
 
 A ferramenta WSO2 ESB possui diversos conectores que permitem o uso de serviços tais como Twitter, Facebook, eBay, Foursquare, Github e Gmail. Também  é possível criar conectores customizados e utilizá-los no WSO2 ESB.
 
@@ -100,8 +99,90 @@ Ao realizar o \textit{upload} do arquivo, as operações do serviço descritos n
 A lista de conectores deverá ser atualizada. Para que possa ser utilizado, o conector deverá ser ativado: apenas clique no \textit{status} correspondente ao conector. As operações disponíveis para uso através do conector podem ser vistos ao clicar no conector identificado pelo nome descrito no arquivo \textit{connector.xml}.
 
 \section{Criação do serviço no ESB}
+Para o uso de operações no ESB é necessária a criação do serviço e a declaração de suas operações. Algumas configurações so serviço podem ser feitas durante a criação deste no WSO2 ESB. Entre as configurações permitidas estão a declaração de propriedades necessárias para o acesso às operações, bem como a sequência de ações a serem tomadas pelo ESB, tanto ao receber uma requisição quanto ao enviar a resposta da mesma, a especificação do formato de entrada e saída das mensagen e do meio de transporte das mensagens.
 
+O WSO2 ESB permite que sejam criados diferentes tipos de serviço \textit{proxy} denominados tranformador, seguro, baseado em WSDL, logging, passagem direta e customizado.
+
+Para utilizar o conector criado para a aplicação EnTurma, foi criado um conector customizado: no menu "\textit{Main}" no canto esquerdo, clicar em "\textit{Proxy Service}" e em seguida em "\textit{Custom Proxy}", conforme exibido na figura abaixo.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=1.0\textwidth]{figuras/criar_servico.PNG}
+\caption{Como criar um serviço de proxy no WSO2 ESB.}
+\label{criar_servico}
+\end{figure}
+
+Ao seguir os passos anteriormente descritos, a tela a seguir será exibida. Neste manual será utilizada a opção de escrever no arquivo de configuração, que é possível ao clicar no link destacado na figura abaixo.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=1.0\textwidth]{figuras/switch_view.PNG}
+\caption{Mudar modo de visualização do arquivo de configuração do serviço.}
+\label{switch_view}
+\end{figure}
+
+A configuração do serviço que foi escrito está no apêndice (LINK PARA ANEXO) deste documento. Este serviço foi escrito e, ao ser salvo, pode ser visto na lista de serviços disponíveis no ESB (na aba "\textit{Main}"  no canto esquerdo, acessar o menu \textit{Manage} -> \textit{Services} -> \textit{List}).
 
 \section{Uso do serviço ESB em uma aplicação}
+Para exemplificar o acesso a operações de um serviço, foi criada uma aplicação cliente que faz uso do conector criado nas seções anterioes deste manual: a aplicação cliente fará uma requisição utilizando a URL do serviço, especificando a operação e forenecendo os valores necessários para esta ser executada. O resultado exibido será o texto puro obtido, que poderia ser manipulado e utilizado para a visualização de resultados de maneira iterativa. 
 
+A aplicação cliente foi escrita em Python (3.4.3) com o auxílio do \textit{framework} Django (1.9.4). A imagem abaixo apresenta a tela onde a operação de visualização de \textit{rankings} de acordo com dados sobre a educação brasileira. O \textit{ranking} é exibido de acordo com o ano e a turma (nível de escolaridade) definidos.
 
+\begin{figure}[htb]
+\centering
+\includegraphics[width=1.0\textwidth]{figuras/visualizar_ranking_embranco.PNG}
+\caption{EnTurma - Visualizar Ranking}
+\label{visualizar_ranking_embranco}
+\end{figure}
+
+O método da aplicação cliente que faz a requisição dos dados referentes ao ranking dados ano e turma está escrito abaixo:
+
+\lstset{language=Python}
+\begin{lstlisting}
+def requisita_ranking(request):
+    resultado = ''
+    if request.method == 'POST':
+        ano = request.POST["ano"]
+        turma = request.POST["turma"]
+
+        url = 'http://localhost:8280/services/enturmaConnector'
+        cabecalho = {'Action': 'urn:getRanking', 
+                    'Content-type':'application/json',
+                    'Cache-Control': 'no-cache'}
+        dados = {'baseUrl':'http://www.projetoenturma.com.br',
+        	'year':ano, 'grade':turma}
+        resposta = requests.post(url, json=dados, headers=cabecalho)
+        resultado = resposta.text        
+        
+    contexto = RequestContext(request, {'resultado':resultado})
+
+    return render_to_response('app/ranking.html', 
+    					context_instance=contexto)
+\end{lstlisting}
+
+\begin{itemize}
+\item \textbf{url}: indica a url do serviço.
+\item \textbf{cabecalho}: em formato JSON, contém a definição da operação ('\textit{Action}'), o tipo de conteúdo (gerealmente '\textit{application}/' + tipo de mensagem), neste caso é o JSON e outras flags.
+\item \textbf{dados}: em formato JSON, contém os valores dos parâmetros necessários para a execução da operação.
+\end{itemize}
+
+Em Python/Django, existe a biblioteca Requests, que permite a integração de aplicações desenvolvidas nesta plataforma com serviços disponíveis na WEB através de requisições HTTP e HTTPS. Esta biblioteca foi utilizada visto sua simplicidade e o fato de o serviço criado para acesso às operações da aplicação EnTurma usar HTTP e HTTPS para transporte de mensagens (recebimento de requisiçõe e envio de respostas).
+
+Na mini-aplicação cliente, a resposta é exibida dentro da caixa de texto em seu formato original. Para que o serviço possa ser encontrado, é necessário que o servidor WSO2 ESB esteja ativo.
+
+\newpage
+\begin{figure}[htb]
+\centering
+\includegraphics[width=1.0\textwidth]{figuras/resultado_ranking_json.PNG}
+\caption{EnTurma - Resposta da Requisição para Visualizar Ranking}
+\label{resultado_ranking_json}
+\end{figure}
+
+O ESB tem funcionalidades que permitem visualizar os \textit{logs} de transações que ocorrem no ESB. Assim, quando a requisição para um determinado serviço é feita, os \textit{logs} relacionados aos recebimento da requisição e envio da resposta podem ser vistos, conforme mostrado na figura abaixo.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=1.0\textwidth]{figuras/losg_mediacao.PNG}
+\caption{WSO2 - Logs de requisições no ESB.}
+\label{losg_mediacao}
+\end{figure}

@@ -1,0 +1,102 @@
+\begin{apendicesenv}
+
+\partapendices
+
+\chapter{Configuração do Serviço de Proxy Customizado no ESB}
+\begin{lstlisting}
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="enturmaConnector"
+       transports="http,https"
+       statistics="enable"
+       trace="enable"
+       startOnLoad="true">
+   <target>
+      <inSequence>
+         <property name="grade" expression="json-eval($.grade)"/>
+         <property name="year" expression="json-eval($.year)"/>
+         <property name="state" expression="json-eval($.state)"/>
+         <property name="test_type" expression=
+         "json-eval($.test_type)"/>
+         <property name="public_type" expression=
+         "json-eval($.public_type)"/>
+         <property name="local" expression="json-eval($.local)"/>
+         <property name="first_year" expression=
+         "json-eval($.first_year)"/>
+         <property name="first_state" expression=
+         "json-eval($.first_state)"/>
+         <property name="first_test_type" expression=
+         "json-eval($.first_test_type)"/>
+         <property name="first_public_type" expression=
+         "json-eval($.first_public_type)"/>
+         <property name="first_local" expression=
+         "json-eval($.first_local)"/>
+         <property name="second_year" expression=
+         "json-eval($.second_year)"/>
+         <property name="second_state" expression=
+         "json-eval($.second_state)"/>
+         <property name="second_test_type" expression=
+         "json-eval($second_.test_type)"/>
+         <property name="second_public_type" expression=
+         "json-eval($.second_public_type)"/>
+         <property name="second_local" expression=
+         "json-eval($.second_local)"/>
+         <property name="baseUrl" expression="json-eval($.baseUrl)"/>
+         <enturma.init>
+            <baseUrl>{$ctx:baseUrl}</baseUrl>
+         </enturma.init>
+         <switch source="get-property('transport', 'Action')">
+            <case regex="urn:getReport">
+               <enturma.getReport>
+                  <year>{$ctx:year}</year>
+                  <state>{$ctx:state}</state>
+                  <grade>{$ctx:grade}</grade>
+                  <test_type>{$ctx:test_type}</test_type>
+                  <public_type>{$ctx:public_type}</public_type>
+                  <local>{$ctx:local}</local>
+               </enturma.getReport>
+            </case>
+            <case regex="urn:getRanking">
+               <enturma.getRanking>
+                  <year>{$ctx:year}</year>
+                  <grade>{$ctx:grade}</grade>
+               </enturma.getRanking>
+            </case>
+            <case regex="urn:compareReports">
+               <enturma.compareReports>
+                  <grade>{$ctx:grade}</grade>
+                  <first_year>{$ctx:first_year}</first_year>
+                  <first_state>{$ctx:first_state}</first_state>
+                  <first_test_type>{$ctx:first_test_type}
+                  </first_test_type>
+                  <first_public_type>{$ctx:first_public_type}
+                  </first_public_type>
+                  <first_local>{$ctx:first_local}</first_local>
+                  <second_year>{$ctx:second_year}</second_year>
+                  <second_state>{$ctx:second_state}</second_state>
+                  <second_test_type>{$ctx:second_test_type}
+                  </second_test_type>
+                  <second_public_type>{$ctx:second_public_type}
+                  </second_public_type>
+                  <second_local>{$ctx:second_local}</second_local>
+               </enturma.compareReports>
+            </case>
+         </switch>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>
+
+\end{lstlisting}
+
+
+%\chapter{Segundo Apêndice}
+
+%Texto do segundo apêndice.
+
+\end{apendicesenv}

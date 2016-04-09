@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.6)  5 APR 2016 13:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.6)  6 APR 2016 16:17
 entering extended mode
 **./manuais.tex
 (manuais.tex
@@ -988,7 +988,7 @@ Package: bold-extra 2001/11/13 v0.1 Use fonts from cm/mf-extra/bold
 ("C:\Users\Beatriz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.
 sty"
 Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
-))
+)
 ("C:\Users\Beatriz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopd
 f.sty"
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
@@ -1005,7 +1005,35 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
-)) (fixos/comandos.tex) (fixos/novosComandos.tex)
+)))
+("C:\Users\Beatriz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listing
+s.sty"
+\lst@mode=\count171
+\lst@gtempboxa=\box30
+\lst@token=\toks29
+\lst@length=\count172
+\lst@currlwidth=\dimen159
+\lst@column=\count173
+\lst@pos=\count174
+\lst@lostspace=\dimen160
+\lst@width=\dimen161
+\lst@newlines=\count175
+\lst@lineno=\count176
+\lst@maxwidth=\dimen162
+
+("C:\Users\Beatriz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc
+.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count177
+\lst@skipnumbers=\count178
+\lst@framebox=\box31
+)
+("C:\Users\Beatriz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listing
+s.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+ (fixos/comandos.tex) (fixos/novosComandos.tex)
 (editaveis/informacoes.tex) (fixos/informacoes.tex) (fixos/setup.tex
 Package color Info: Redefining color blue on input line 1.
 Package hyperref Info: Option `colorlinks' set `true' on input line 16.
@@ -1037,7 +1065,7 @@ LaTeX Font Info:    Try loading font information for T1+lmr on input line 9.
 ("C:\Users\Beatriz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\AtBeginShipoutBox=\box30
+\AtBeginShipoutBox=\box32
 Package hyperref Info: Link coloring ON on input line 9.
 
 ("C:\Users\Beatriz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref
@@ -1048,7 +1076,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 tlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count171
+\c@section@level=\count179
 )
 Redoing nameref's sectioning
 Redoing nameref's label
@@ -1059,7 +1087,7 @@ LaTeX Info: Redefining \nameref on input line 9.
 LaTeX Info: Redefining \degres on input line 9.
 LaTeX Info: Redefining \dots on input line 9.
 LaTeX Info: Redefining \up on input line 9.
-\myptabbox=\box31
+\myptabbox=\box33
 \myptabboxwidth=\skip269
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
@@ -1068,18 +1096,19 @@ Package lastpage Info: Please have a look at the pageslts package at
 ("C:\Users\Beatriz\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.
 mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count172
-\scratchdimen=\dimen159
-\scratchbox=\box32
-\nofMPsegments=\count173
-\nofMParguments=\count174
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count175
-\MPscratchDim=\dimen160
-\MPnumerator=\count176
-\makeMPintoPDFobject=\count177
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count180
+\scratchdimen=\dimen163
+\scratchbox=\box34
+\nofMPsegments=\count181
+\nofMParguments=\count182
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count183
+\MPscratchDim=\dimen164
+\MPnumerator=\count184
+\makeMPintoPDFobject=\count185
+\everyMPtoPDFconversion=\toks31
 )
+\c@lstlisting=\count186
 LaTeX Font Info:    Try loading font information for T1+lmss on input line 12.
  ("C:\Users\Beatriz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1156,12 +1185,25 @@ l.3 \cleardoublepage
 
 ] [6
 
-]) (fixos/indiceAutomatico.tex (manuais.toc) [7] [8
+]) (fixos/indiceAutomatico.tex (manuais.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 29.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 29.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 29.
 
-])
-(editaveis/instalacaowso2.tex
+Overfull \hbox (9.44711pt too wide) in paragraph at lines 33--33
+ [][] [][][]\T1/lmss/bx/n/12 CONFIGURAÇÃO DO SER-VIÇO DE PROXY CUS- 
+ []
+
+) [7] [8
+
+]) (editaveis/instalacaowso2.tex
+
+Package hyperref Warning: Suppressing empty link on input line 5.
+
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 10.
-
 ("C:\Users\Beatriz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1173,14 +1215,14 @@ Overfull \hbox (15.5992pt too wide) in paragraph at lines 19--20
 1/lmr/m/n/12 foi ex-traído (re-fe-ren-ci-ado como <WSO2>),
  []
 
-<figuras/log_iniciacao_wso2.PNG, id=109, 434.37282pt x 289.83281pt>
+<figuras/log_iniciacao_wso2.PNG, id=127, 434.37282pt x 289.83281pt>
 File: figuras/log_iniciacao_wso2.PNG Graphic file (type png)
 
 <use figuras/log_iniciacao_wso2.PNG>
 Package pdftex.def Info: figuras/log_iniciacao_wso2.PNG used on input line 32.
 (pdftex.def)             Requested size: 455.0pt x 303.61255pt.
 
-<figuras/mudar_senha.PNG, id=111, 1026.08344pt x 494.59781pt>
+<figuras/mudar_senha.PNG, id=129, 1026.08344pt x 494.59781pt>
 File: figuras/mudar_senha.PNG Graphic file (type png)
 
 <use figuras/mudar_senha.PNG>
@@ -1190,84 +1232,197 @@ Package pdftex.def Info: figuras/mudar_senha.PNG used on input line 44.
 
 ]) (editaveis/criacaoconectores.tex [10 <./figuras/log_iniciacao_wso2.PNG> <./f
 iguras/mudar_senha.PNG>]
-Overfull \hbox (34.16336pt too wide) in paragraph at lines 7--9
-[]\T1/lmr/m/n/12 (REFERENCIAR https://docs.wso2.com/display/ESB480/Working+with
-+Connectors)
- []
+
+Package hyperref Warning: Suppressing empty link on input line 7.
 
 [11
 
-] <figuras/estrutura_conector.PNG, id=134, 150.5625pt x 177.66376pt>
+] <figuras/estrutura_conector.PNG, id=155, 150.5625pt x 177.66376pt>
 File: figuras/estrutura_conector.PNG Graphic file (type png)
 
 <use figuras/estrutura_conector.PNG>
-Package pdftex.def Info: figuras/estrutura_conector.PNG used on input line 29.
+Package pdftex.def Info: figuras/estrutura_conector.PNG used on input line 28.
 (pdftex.def)             Requested size: 227.5pt x 268.47665pt.
  [12 <./figuras/estrutura_conector.PNG>]
-<figuras/operacao_ranking.PNG, id=139, 788.19469pt x 295.1025pt>
+<figuras/operacao_ranking.PNG, id=160, 788.19469pt x 295.1025pt>
 File: figuras/operacao_ranking.PNG Graphic file (type png)
 
 <use figuras/operacao_ranking.PNG>
-Package pdftex.def Info: figuras/operacao_ranking.PNG used on input line 49.
+Package pdftex.def Info: figuras/operacao_ranking.PNG used on input line 48.
 (pdftex.def)             Requested size: 455.0pt x 170.35353pt.
 
-<figuras/operacao_init.PNG, id=140, 442.65375pt x 149.05687pt>
+<figuras/operacao_init.PNG, id=161, 442.65375pt x 149.05687pt>
 File: figuras/operacao_init.PNG Graphic file (type png)
 
 <use figuras/operacao_init.PNG>
-Package pdftex.def Info: figuras/operacao_init.PNG used on input line 59.
+Package pdftex.def Info: figuras/operacao_init.PNG used on input line 58.
 (pdftex.def)             Requested size: 455.0pt x 153.22324pt.
  [13 <./figuras/operacao_ranking.PNG> <./figuras/operacao_init.PNG>]
-<figuras/componente.PNG, id=145, 800.9925pt x 294.34969pt>
+<figuras/componente.PNG, id=166, 800.9925pt x 294.34969pt>
 File: figuras/componente.PNG Graphic file (type png)
 
 <use figuras/componente.PNG>
-Package pdftex.def Info: figuras/componente.PNG used on input line 69.
+Package pdftex.def Info: figuras/componente.PNG used on input line 68.
 (pdftex.def)             Requested size: 455.0pt x 167.20615pt.
 
-<figuras/connectorxml.PNG, id=146, 429.10312pt x 169.38281pt>
+<figuras/connectorxml.PNG, id=167, 429.10312pt x 169.38281pt>
 File: figuras/connectorxml.PNG Graphic file (type png)
 
 <use figuras/connectorxml.PNG>
-Package pdftex.def Info: figuras/connectorxml.PNG used on input line 80.
+Package pdftex.def Info: figuras/connectorxml.PNG used on input line 79.
 (pdftex.def)             Requested size: 455.0pt x 179.60693pt.
 
-<figuras/add_connector.PNG, id=147, 1026.08344pt x 490.08093pt>
+<figuras/add_connector.PNG, id=168, 1026.08344pt x 490.08093pt>
 File: figuras/add_connector.PNG Graphic file (type png)
 
 <use figuras/add_connector.PNG>
-Package pdftex.def Info: figuras/add_connector.PNG used on input line 93.
+Package pdftex.def Info: figuras/add_connector.PNG used on input line 92.
 (pdftex.def)             Requested size: 455.0pt x 217.31883pt.
- [14 <./figuras/componente.PNG> <./figuras/connectorxml.PNG>])
-No file manuais.bbl.
+ [14 <./figuras/componente.PNG> <./figuras/connectorxml.PNG>] [15 <./figuras/ad
+d_connector.PNG>]
+<figuras/criar_servico.PNG, id=177, 1026.08344pt x 494.59781pt>
+File: figuras/criar_servico.PNG Graphic file (type png)
+
+<use figuras/criar_servico.PNG>
+Package pdftex.def Info: figuras/criar_servico.PNG used on input line 110.
+(pdftex.def)             Requested size: 455.0pt x 219.32176pt.
+
+<figuras/switch_view.PNG, id=178, 1027.58907pt x 493.0922pt>
+File: figuras/switch_view.PNG Graphic file (type png)
+
+<use figuras/switch_view.PNG>
+Package pdftex.def Info: figuras/switch_view.PNG used on input line 119.
+(pdftex.def)             Requested size: 455.0pt x 218.33812pt.
+ [16 <./figuras/criar_servico.PNG> <./figuras/switch_view.PNG>]
+<figuras/visualizar_ranking_embranco.PNG, id=184, 1026.08344pt x 476.53032pt>
+File: figuras/visualizar_ranking_embranco.PNG Graphic file (type png)
+
+<use figuras/visualizar_ranking_embranco.PNG>
+Package pdftex.def Info: figuras/visualizar_ranking_embranco.PNG used on input 
+line 133.
+(pdftex.def)             Requested size: 455.0pt x 211.31001pt.
+
+("C:\Users\Beatriz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang
+1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+) [17 <./figuras/visualizar_ranking_embranco.PNG>]
+Overfull \hbox (24.3971pt too wide) in paragraph at lines 154--155
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.29718pt too wide) in paragraph at lines 160--161
+[][][][][][][][] 
+ []
+
+[18] <figuras/resultado_ranking_json.PNG, id=214, 1027.58907pt x 479.54156pt>
+File: figuras/resultado_ranking_json.PNG Graphic file (type png)
+
+<use figuras/resultado_ranking_json.PNG>
+Package pdftex.def Info: figuras/resultado_ranking_json.PNG used on input line 
+176.
+(pdftex.def)             Requested size: 455.0pt x 212.33798pt.
+
+<figuras/losg_mediacao.PNG, id=215, 1026.08344pt x 493.0922pt>
+File: figuras/losg_mediacao.PNG Graphic file (type png)
+
+<use figuras/losg_mediacao.PNG>
+Package pdftex.def Info: figuras/losg_mediacao.PNG used on input line 185.
+(pdftex.def)             Requested size: 455.0pt x 218.65413pt.
+) (manuais.bbl (manuais.brf)
+\tf@brf=\write5
+\openout5 = `manuais.brf'.
+
+ [19 <./figuras/resultado_ranking_json.PNG> <./figuras/losg_mediacao.PNG>] [20
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\uppercase' on input line 3.
+
+bibitemlist
+) (editaveis/apendices.tex [21] [22
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\uppercase' on input line 4.
+
+[23
+
+] [24]
+Overfull \hbox (3.24722pt too wide) in paragraph at lines 16--17
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.24722pt too wide) in paragraph at lines 18--19
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.24722pt too wide) in paragraph at lines 23--24
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25
+
+]
+Overfull \hbox (31.44705pt too wide) in paragraph at lines 44--45
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.29718pt too wide) in paragraph at lines 76--77
+[][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26]
+Overfull \hbox (10.29718pt too wide) in paragraph at lines 81--82
+[][][][][][][][][][][][][] 
+ []
+
+)
 No file manuais.ind.
 
 AED: lastpage setting LastPage
-[15 <./figuras/add_connector.PNG>]
-\tf@lof=\write5
-\openout5 = `manuais.lof'.
+[27]
+\tf@lof=\write6
+\openout6 = `manuais.lof'.
 
-\tf@lot=\write6
-\openout6 = `manuais.lot'.
+\tf@lot=\write7
+\openout7 = `manuais.lot'.
 
-\tf@toc=\write7
-\openout7 = `manuais.toc'.
+\tf@toc=\write8
+\openout8 = `manuais.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 31.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 31.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 33.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 33.
  (manuais.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 31.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 31.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 31.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 33.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 33.
+Package rerunfilecheck Info: File `manuais.brf' has not changed.
+(rerunfilecheck)             Checksum: E477CA3EBDE9F259FDFD24BE484043B6;111.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 33.
  ) 
 Here is how much of TeX's memory you used:
- 12399 strings out of 493634
- 184827 string characters out of 3134424
- 302461 words of memory out of 3000000
- 15461 multiletter control sequences out of 15000+200000
- 55989 words of font info for 40 fonts, out of 3000000 for 9000
+ 14482 strings out of 493634
+ 212928 string characters out of 3134424
+ 369361 words of memory out of 3000000
+ 17367 multiletter control sequences out of 15000+200000
+ 69571 words of font info for 50 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 41i,13n,38p,621b,482s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,13n,40p,612b,1959s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Beatriz/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.
 enc}{C:/Users/Beatriz/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-m
 athsy.enc}<C:/Users/Beatriz/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
@@ -1281,9 +1436,9 @@ grams/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/Users/Beatriz/AppData/Loc
 al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb><C:/Users/Beatriz/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Beatr
 iz/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-Output written on manuais.pdf (17 pages, 622383 bytes).
+Output written on manuais.pdf (29 pages, 997681 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 210 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 482 PDF objects out of 1000 (max. 8388607)
+ 180 named destinations out of 1000 (max. 500000)
+ 259 words of extra memory for PDF output out of 10000 (max. 10000000)
 

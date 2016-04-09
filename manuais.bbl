@@ -1,0 +1,22 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.5 }
+
+\bibitem[Tutorial - {Enterprise} {Service} {Bus} 4.6.0 - {WSO}2
+  {Documentation}]{tutorial_ESB}
+\abntrefinfo{Tutorial\ldots}{TUTORIAL\ldots}{}
+{TUTORIAL - {Enterprise} {Service} {Bus} 4.6.0 - {WSO}2 {Documentation}.
+Dispon{\'\i}vel em: \url{https://docs.wso2.com/display/ESB460/Tutorial}.}
+
+\bibitem[Working with {Connectors} - {Enterprise} {Service} {Bus} 4.8.0 -
+  {WSO}2 {Documentation}]{working_with_connecntors}
+\abntrefinfo{Working\ldots}{WORKING\ldots}{}
+{WORKING with {Connectors} - {Enterprise} {Service} {Bus} 4.8.0 - {WSO}2
+  {Documentation}.
+Dispon{\'\i}vel em:
+  \url{https://docs.wso2.com/display/ESB480/Working+with+Connectors}.}
+
+\end{thebibliography}
